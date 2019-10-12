@@ -2,6 +2,12 @@
 layout: layouts/base.njk
 templateClass: tmpl-post
 ---
+{# include katex css file #}
+{% if disableKatex %}
+{% else %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
+{# in-page custom style for katex and img #}
+{% endif %}
 <h1>{{ title }}</h1>
 
 {{ content | safe }}
