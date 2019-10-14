@@ -137,6 +137,54 @@ $
 \begin{bmatrix}3 \\ 4 \\ 5\end{bmatrix}
 $
 
+## Problem 20
+What 2 by 2 matrix $P_1$ projects the vector $(x,y)$ onto the $x$ axis to
+produce $(x,0)$?
+
+What matrix $P_2$ projects onto the $y$ axis to produce $(0,y)$?
+
+What do you get if you multiply $(5,7)$ by $P_1$ and then multiply by $P_2$?
+## Solution 20
+```
+This exercise shows how we can combine projection matrices to modify a vector v.
+```
+
+$P_1 = \begin{bmatrix}1 & 0 \\ 0 & 0\end{bmatrix}$
+
+$P_2 = \begin{bmatrix}0 & 0 \\ 0 & 1\end{bmatrix}$
+
+$\begin{bmatrix}1 & 0 \\ 0 & 0\end{bmatrix}\begin{bmatrix}5 \\ 7\end{bmatrix}=\begin{bmatrix}5 \\ 0\end{bmatrix}$
+
+$\begin{bmatrix}0 & 0 \\ 0 & 1\end{bmatrix}\begin{bmatrix}5 \\ 0\end{bmatrix}=\begin{bmatrix}0 \\ 0\end{bmatrix}$
+
+$P_2P_1\boldsymbol{v}=\begin{bmatrix}0 \\ 0\end{bmatrix}$
 
 
+## Problem 21
+What 2 by 2 matrix $R$ rotates every vector through 45$\degree$?
+The vector $(1,0)$ goes to $(\frac{\sqrt{2}}{2},\frac{\sqrt{2}}{2})$.
+The vector $(0,1)$ goes to $(\frac{-\sqrt{2}}{2},\frac{\sqrt{2}}{2})$.
+Those determine the matrix. Draw these particular vectors in the $xy$ plane and
+find $R$.
+
+## Solution 21
+$R = \begin{bmatrix}
+    \frac{\sqrt{2}}{2} & -\frac{\sqrt{2}}{2} \\
+    \frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2}
+    \end{bmatrix}
+$
+
+## Problem 22
+Write the dot product of $(1,4,5)$ and $(x,y,z)$ as a matrix multiplication
+$A\boldsymbol{x}$. The matrix $A$ has one row. The solutions to $A\boldsymbol{x}
+= \boldsymbol{0}$ lie on a `?` perpendicular to the vector `?`. The columns of
+$A$ are only in `?`-dimensional space.
+
+## Solution 22
+$A\boldsymbol{x} = \begin{bmatrix}1 & 4 & 5\end{bmatrix}\begin{bmatrix}x \\ y
+\\ z\end{bmatrix} = \boxed{1x + 4y + 5z}$.
+
+The solutions to $1x + 4y + 5z = 0$ lie on a **plane**.
+The three columns of $A$ are only in **1**-dimensional space.
+$\textcolor{red}{\textnormal{I do not know what vector this plane is perpendicular to.}}$
 
