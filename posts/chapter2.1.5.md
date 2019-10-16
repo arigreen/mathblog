@@ -17,7 +17,7 @@ Plot $\boldsymbol{u}_0$ to $\boldsymbol{u}_7$ and $\boldsymbol{v}_0$ to $\boldsy
 The $\boldsymbol{u}$'s and $\boldsymbol{v}$'s are approaching a steady state
 vector $\boldsymbol{s}$. Guess that vector and check that $A\boldsymbol{s}=\boldsymbol{s}.$
 
-## Solution 29
+## Solution 30
 $
 \boldsymbol{u}_1 =A\boldsymbol{u}_0=\begin{bmatrix}.8 & .3 \\ .2 & .7\end{bmatrix}
 \begin{bmatrix}1 \\ 0\end{bmatrix}=\begin{bmatrix}.8 \\ .2\end{bmatrix}
@@ -106,4 +106,72 @@ $
 A\boldsymbol{s} = \begin{bmatrix}.8 & .3 \\ .2 & .7\end{bmatrix}
 \begin{bmatrix}6 \\ 4\end{bmatrix}=\begin{bmatrix}6 \\ 4\end{bmatrix}
 $
+
+## Problem 31
+Invent a 3 by 3 **magic matrix** $M_3$ with entries $1,2,...9$. All rows,
+columns, and diagonals add to 15. The first row could be $8, 3, 4$. What is
+$M_3$ times $(1,1,1)$? What is $M_4$ times $(1,1,1,1)$ if a 4 by 4 magic matrix
+has entries $1, ..., 16$?
+
+## Solution 31
+$M_3 = \begin{bmatrix}
+m_{11}&m_{12}&m_{13}\\
+m_{21}&m_{22}&m_{23}\\
+m_{31}&m_{32}&m_{33}
+\end{bmatrix}
+\begin{bmatrix}1 \\ 1 \\ 1\end{bmatrix}=
+\begin{bmatrix}
+m_{11}+m_{12}+m_{13}\\
+m_{21}+m_{22}+m_{23}\\
+m_{31}+m_{32}+m_{33}
+\end{bmatrix}=
+\begin{bmatrix}
+15 \\ 15 \\ 15
+\end{bmatrix}$
+
+because each row of $M_3$ sums to $15$.
+
+Similarly, $M_4$ times $(1,1,1,1)$ = $(34,34,34,34)$
+
+## Problem 32
+Suppose $\boldsymbol{u}$ and $\boldsymbol{v}$ are the first two columns of a 3
+by 3 matrix $A$. Which third columns $\boldsymbol{w}$ would make the matrix
+singular? Describe a typical column picture of $A\boldsymbol{x}=\boldsymbol{b}$
+in that singular case, and a typical row picture (for a random $\boldsymbol{b}$).
+
+::: warning
+I was not able to correctly describe the column and row pictures -- I needed to look at the solution guide.
+:::
+
+## Solution 32
+$\boldsymbol{w}$ would be some linear combination
+$c_1\boldsymbol{u}+c_2\boldsymbol{v}$.
+
+The column picture in the singular case
+would be three vectors that span a plane, with $\boldsymbol{b}$ outside that
+plane. The row picture shows the intersection line of two planes parallel to a third
+plane.
+
+## Problem 33
+**Multiplication by $A$ is a `linear transformation`.** This means:
+
+::: note
+If $\boldsymbol{w}$ is a combination of $\boldsymbol{u}$ and $\boldsymbol{v}$,
+then $A\boldsymbol{w}$ is the same combination of $A\boldsymbol{u}$ and
+$A\boldsymbol{v}$.
+:::
+
+It is this **linearity** $A\boldsymbol{w}=cA\boldsymbol{u} + dA\boldsymbol{v}$
+that gives us the name "linear algebra".
+
+If $\boldsymbol{u} = \begin{bmatrix}1\\0\end{bmatrix}$ and $\boldsymbol{v} = \begin{bmatrix}0\\1\end{bmatrix}$
+then $A\boldsymbol{u}$ and $A\boldsymbol{v}$ are the columns of $A$.
+
+Let $\boldsymbol{w} = c\boldsymbol{u} + d\boldsymbol{v}$. If $\boldsymbol{w} =
+\begin{bmatrix}5 \\ 7\end{bmatrix}$ then how is $A\boldsymbol{w}$ connected to
+$A\boldsymbol{u}$ and $A\boldsymbol{v}$?
+
+## Solution 33
+$A\boldsymbol{w} = cA\boldsymbol{u} +  dA\boldsymbol{v}$.
+Thus, $c=5$ and $d=7$.
 

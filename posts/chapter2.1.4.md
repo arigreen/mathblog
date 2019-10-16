@@ -106,7 +106,7 @@ $
 $
 
 $
-\boldsymbol{u}_2 =A\boldsymbol{u}_1=
+\boldsymbol{u}_3 =A\boldsymbol{u}_2=
 \begin{bmatrix}.8 & .3 \\ .2 & .7\end{bmatrix}
 \begin{bmatrix}.7 \\ .3\end{bmatrix}=\begin{bmatrix}.65 \\ .35\end{bmatrix}
 $
