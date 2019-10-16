@@ -23,6 +23,8 @@ p:last-child {
   margin-bottom: 0;
 }
 p,
+.note,
+.warning,
 .tmpl-post li,
 img {
   max-width: 37.5em; /* 600px /16 */
@@ -198,15 +200,6 @@ a[href].tag:visited {
   color: #fff;
 }
 
-/* Warning */
-.warning {
-  background-color: #ffc;
-  padding: 1em 0.625em; /* 16px 10px /16 */
-}
-.warning ol:only-child {
-  margin: 0;
-}
-
 /* Direct Links / Markdown Headers */
 .direct-link {
   font-family: sans-serif;
@@ -224,3 +217,31 @@ a[href].direct-link:focus:visited,
 :hover > a[href].direct-link:visited {
   color: #aaa;
 }
+
+/* markdown-it-container custom css */
+/*
+ * custom class note
+ */
+
+.note {
+  padding: 1em 0.625em; /* 16px 10px /16 */
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+
+.note ol:only-child {
+  margin: 0;
+}
+
+.warning {
+  padding: 1em 0.625em; /* 16px 10px /16 */
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+
+.warning ol:only-child {
+  margin: 0;
+}
+

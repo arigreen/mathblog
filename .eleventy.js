@@ -35,6 +35,7 @@ module.exports = function(eleventyConfig) {
 
   /* Markdown Plugins */
   let markdownIt = require("markdown-it");
+  let markdownItContainer = require("markdown-it-container");
   let markdownItKatex = require('@iktakahiro/markdown-it-katex');
 
   let markdownItAnchor = require("markdown-it-anchor");
@@ -52,6 +53,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.setLibrary("md", markdownIt(options)
     .use(markdownItAnchor, opts)
     .use(markdownItKatex, {"throwOnError" : false, "errorColor" : " #cc0000"})
+    .use(markdownItContainer, 'note')
+    .use(markdownItContainer, 'warning')
   );
 
   eleventyConfig.setBrowserSyncConfig({
