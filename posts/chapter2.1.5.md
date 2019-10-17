@@ -175,3 +175,87 @@ $A\boldsymbol{u}$ and $A\boldsymbol{v}$?
 $A\boldsymbol{w} = cA\boldsymbol{u} +  dA\boldsymbol{v}$.
 Thus, $c=5$ and $d=7$.
 
+## Problem 34
+Start from the four equations $-x_{i+1}+2x_i-x_{i-1} = i$ for $i=1,2,3,4$ with
+$x_0=x_5=0$. Write those equations in their matrix form
+$A\boldsymbol{x}=\boldsymbol{b}$. Can you solve them for $x_1,x_2,x_3,x_4$?
+## Solution 34
+$
+i = 1: -x_2 + 2x_1 - x_0 = 1 \longrightarrow -x_2 + 2x_1 = 1 \\
+i = 2: -x_3 + 2x_2 - x_1 = 2 \\
+i = 3: -x_4 + 2x_3 - x_2 = 3 \\
+i = 4: -x_5 + 2x_4 - x_3 = 4 \longrightarrow 2x_4 - x_3 = 4
+$
+
+Rewriting the equations:
+
+$
+2x_1 - x_2 + 0x_3 + 0x_4 = 1  \\
+-x_1 + 2x_2 -x_3 + 0x_4 = 2 \\
+0x_1 - x_2 +2x_3 - x_4 = 3 \\
+0x_1 + 0x_2 -x_3 + 2x_4 = 4
+$
+
+$
+\left[ \begin{array}{cccc|c}
+2 & -1 & 0 & 0 & 1 \\
+-1 & 2 & -1 & 0 & 2 \\
+0 & -1 & 2 & -1 & 3 \\
+0 & 0 & -1 & 2 & 4
+\end{array} \right]
+\longrightarrow
+\left[ \begin{array}{cccc|c}
+2 & -1 & 0 & 0 & 1 \\
+0 & 3 & -2 & 0 & 5 \\
+0 & -1 & 2 & -1 & 3 \\
+0 & 0 & -1 & 2 & 4
+\end{array} \right]
+\longrightarrow
+\left[ \begin{array}{cccc|c}
+2 & -1 & 0 & 0 & 1 \\
+0 & 3 & -2 & 0 & 5 \\
+0 & 0 & 4 & -3 & 14 \\
+0 & 0 & -1 & 2 & 4
+\end{array} \right]
+\longrightarrow
+\left[ \begin{array}{cccc|c}
+2 & -1 & 0 & 0 & 1 \\
+0 & 3 & -2 & 0 & 5 \\
+0 & 0 & 4 & -3 & 14 \\
+0 & 0 & 0 & 5 & 30
+\end{array} \right]
+$
+
+$
+\begin{aligned}
+5x_4 = 30 \longrightarrow \boxed{x_4=6} \\
+4x_3 - 3x_4 = 14 \longrightarrow 4x_3 = 32 \longrightarrow \boxed{x_3=8} \\
+3x_2 - 2x_3 = 5 \longrightarrow 3x_2 = 21 \longrightarrow \boxed{x_2=7} \\
+2x_1 - x_2 = 1 \longrightarrow 2x_1 - 7 = 1 \longrightarrow \boxed{x_1=4}
+\end{aligned}
+$
+
+## Problem 35
+A 9 by 9 **Sudoku matrix** $S$ has the numbers $1,\ldots,9$ in every row and
+every column, and in every 3 by 3 block. For the all-ones vector $\boldsymbol{x}
+= (1,\ldots,1)$, what is $S\boldsymbol{x}$?
+
+A better question is: **Which row exchanges will produce another Sudoku
+matrix?**
+Also, which exchanges of block rows give another Sudoku matrix?
+
+Section 2.7 will look at all possible permutations of the rows. I can see 6
+orders for the first 3 rows, all giving Sudoku matrices. Also 6 permutations of
+the next 3 rows, and the last 3 rows. And 6 block permutations of the block
+rows?
+## Solution 35
+Multiplying $S\boldsymbol{x}$ will give a nine-dimensional vector with each
+element being the sum of a row in $S$. Since each row in $S$ contains each integer
+between 1 and 9 exactly once, each element of the result will be equal to $\displaystyle\sum_{i=1}^9{i}=45$.
+
+Exchanging row 1 with row 2, row 1 with row 3, and row 2 with row 3 will all
+result in Sudoku matrices. Likewise for rows 4, 5, and 6, as well as for rows 7,
+8, and 9.
+
+Exchanging blocks will in general not result in a sudoku matrix.
+
