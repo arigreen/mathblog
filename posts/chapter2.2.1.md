@@ -195,4 +195,72 @@ If $a$ is $2$, however, then the second step of elimination will fail because
 subtracting 2 copies of equation 1 from equation 2 leaves a zero in the pivot
 location. This is a permanent failure, and there are no solutions.
 
+## Problem 8
+For which three numbers $k$ does elimination break down? Which is fixed by a row
+exchange? In each case, is the number of solutions 0, 1, or $\infty$?
+
+$
+\begin{aligned}
+kx+3y&=6 \\
+3x+ky&= -6
+\end{aligned}
+$
+
+## Solution 8
+Clearly, setting $k=0$ will require a row exchange because zero is not allowed
+in the first pivot position. The row exchange works smoothly, and there is 1
+solution: $x=-2, y=2$.
+
+Next, let's examine which value of $k$ will cause elimination to fail due to a
+zero is the second pivot position. Subtracting $\frac{3}{k}$ copies of equation
+1 from equation 2 eliminates $x$ from the second equation, resulting in
+$ky - \frac{9}{k}y = -6 - \frac{18}{k}$
+We want the coefficient of $y$ on the hand side to equal zero, that is:
+
+$
+k -\frac{9}{k} = 0 \longrightarrow k= \frac{9}{k} \longrightarrow
+k^2 = 9 \longrightarrow \boxed{k=\pm3}
+$
+
+Substituting $k=3$ into the equations gives $3x+3y=6$ and $3x+3y=-6$, so there
+are no solutions.
+
+Substituting $k=-3$ into the equations gives $-3x+3y=6$ and $3x-3y=-6$,
+adding these equations together gives $0x+0y=0$ so there are infinite solutions,
+and in fact all real values of $x$ and $y$ are solutions.
+
+## Problem 9
+What test on $b_1$ and $b_2$ decides whether these two equations allow a
+solution? How many solutions will they have? Draw the column picture for
+$\boldsymbol{b}=(1,2)$ and $\boldsymbol{b}=(1,0)$.
+
+$
+\begin{aligned}
+3x-2y&=b_1 \\
+6x-4y&= b_2
+\end{aligned}
+$
+
+## Solution 9
+Calculating the determinant $(3*-4)-(-2*6)$ gives $0$, so the matrix is
+**singular**. Thus, there are either zero or infinite solutions depending on the
+value of $\boldsymbol{b}$.
+
+Since equation two is twice equation one, there will be inifinite solutions if
+and only if $b_2$ is twice $b_1$. Otherwise, there are no solutions.
+
+The column picture draws vectors $(3,6)$ and $(-2,-4)$ which lie on the same line.
+$\boldsymbol{b}=(1,0)$ is not on this line so there is no solution, while
+$\boldsymbol{b}=(1,2)$ is on the line so it does have solutions.
+
+## Problem 10
+In the $xy$ plane, draw the lines $x+y=5$ and $x+2y=6$ and the equation $y=?$
+that comes from elimination. The line $5x-4y=c$ will go through the solution of
+these equations if $c$ = ?
+
+## Solution 10
+I graphed these equations on desmos.com:
+![Graph](/img/Problem2.2.9.png)
+The red line is $x+y=5$ and the green line is $x+2y=6$. The elimination line is
+$y=1$. The black line is $5x-4y=16$.
 
