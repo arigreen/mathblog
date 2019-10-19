@@ -131,3 +131,68 @@ We haven't learned the signifcance of the _determinant_ yet, but this exercise
 shows us why things don't work properly when $da-bc=0$ because you cannot solve
 for $y$.
 :::
+
+## Problem 5
+Choose a right side which gives no solution and another right side which gives
+infinitely many solutions. What are two of those solutions?
+
+$
+\begin{aligned}
+3x+2y&=10 \\
+6x+4y&= ?
+\end{aligned}
+$
+
+## Solution 5
+Subtracting 2 copies of the first equation from the second results in a zero in
+the second pivot location, so this system of equations is **singular**. The left
+side of equation 2 is twice the left hand side of equation 1, so for any
+solution the right side of equation 2 must be twice the right side of equation 1.
+Thus, $6x+4y=\bold{20}$ results in solutions, and any other value would have no
+solution.
+
+$3x+2y=10$ and $6x+4y=20$ define the same line. $x=2,y=2$ and $x=0,y=5$ are two
+of the solutions to that line.
+
+## Problem 6
+Choose a coefficient $b$ that makes this system singular.
+Then choose a right side $g$ that makes it solvable. Find two solutions in that
+singular case.
+
+$
+\begin{aligned}
+2x+by&=16 \\
+4x+8y&= g
+\end{aligned}
+$
+
+## Solution 6
+By inspection, choosing $b=4$ will result in the left side of the second
+equation being a multiple of the left side of the first equation. This makes the
+system **singular**. In other words, the determinant is 0 because $ad-bc=0$.
+
+To make the system solvable, we need the second equation to be twice the first
+equation. Hence, $g$ must be $32$. Solutions include $x=8,y=0$ and $x=4,y=0$
+Solutions include $x=8,y=0$ and $x=4,y=0$.
+
+## Problem 7
+For which numbers $a$ does elimination break down (1) permanently and (2)
+temporarily?
+
+$
+\begin{aligned}
+ax+3y&=-3 \\
+4x+6y&= 6
+\end{aligned}
+$
+
+## Solution 7
+If $a$ is $0$, we need to immediately do a row exchange because we can't have a
+zero in the first pivot location. Elimination will proceed smoothly after the row
+exchange, although it's easier to solve by inspection: $y=-1, x=3$.
+
+If $a$ is $2$, however, then the second step of elimination will fail because
+subtracting 2 copies of equation 1 from equation 2 leaves a zero in the pivot
+location. This is a permanent failure, and there are no solutions.
+
+
