@@ -7,7 +7,8 @@
     "build": "npx eleventy",
     "watch": "npx eleventy --watch",
     "debug": "DEBUG=* npx eleventy",
-    "start": "npx @11ty/eleventy --serve"
+    "start": "npx @11ty/eleventy --serve",
+    "preinstall": "npx npm-force-resolutions"
   },
   "repository": {
     "type": "git",
@@ -33,5 +34,8 @@
     "markdown-it": "^8.4.2",
     "markdown-it-anchor": "^5.2.5",
     "markdown-it-container": "^2.0.0"
+  },
+  "resolutions": {
+    "katex": "0.11.1"
   }
 }
