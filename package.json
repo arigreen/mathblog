@@ -3,9 +3,11 @@
   "version": "5.0.0",
   "description": "A starter repository for a blog web site using the Eleventy static site generator.",
   "scripts": {
+    "clean": "rm -rf _site",
     "build": "npx eleventy",
     "watch": "npx eleventy --watch",
-    "debug": "DEBUG=* npx eleventy"
+    "debug": "DEBUG=* npx eleventy",
+    "start": "npx @11ty/eleventy --serve"
   },
   "repository": {
     "type": "git",
@@ -29,6 +31,7 @@
     "luxon": "^1.12.0",
     "markdown-it": "^8.4.2",
     "markdown-it-anchor": "^5.0.2",
-    "markdown-it-container": "^2.0.0"
+    "markdown-it-container": "^2.0.0",
+    "katex": "0.11.1"
   }
 }
