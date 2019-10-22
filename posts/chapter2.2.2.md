@@ -122,3 +122,88 @@ This is getting repetitive, but didn't someone smart say that repetition is the
 key to success? Also, it was easy to copy and paste the katex from the previous
 question and just change the numbers!
 :::
+
+## Problem 14
+Which number $d$ forces a row exchange, and what is the triangular system (not
+singular) for that $d$? Which $d$ makes this system singular (no third pivot)?
+
+$
+\begin{aligned}
+2x+5y+z&=0\\
+4x+dy+z&=2\\
+y-z&=3
+\end{aligned}
+$
+
+## Solution 14
+If $d=0$ then we will need to exchange rows 2 and 3 to avoid a 0 in the second
+pivot location:
+
+$
+\begin{aligned}
+A = &
+\left[ \begin{array}{ccc|c}
+2 & 5 & 1 & 0 \\
+4 & 0 & 1 & 2 \\
+0 & 1 & -1 & 3
+\end{array} \right] \\
+\xrightarrow{R_2\leftrightarrow R_3}
+& \left[ \begin{array}{ccc|c}
+2 & 5 & 1 & 0 \\
+0 & 1 & -1 & 3 \\
+4 & 0 & 1 & 2
+\end{array} \right] \\
+\xrightarrow{R_3=R_3-2R_1}
+& \left[ \begin{array}{ccc|c}
+2 & 5 & 1 & 0 \\
+0 & 1 & -1 & 3 \\
+0 & -10 & -1 & 2
+\end{array} \right] \\
+\xrightarrow{R_3=R_3+10R_2}
+& \left[ \begin{array}{ccc|c}
+2 & 5 & 1 & 0 \\
+0 & 1 & -1 & 3 \\
+0 & 0 & -11 & 32
+\end{array} \right]
+=U
+\end{aligned}
+$
+
+Back substitution:
+
+$
+\begin{aligned}
+z &= -\frac{32}{11} \\
+y &= \frac{1}{11} \\
+x &= \frac{27}{22} \\
+\end{aligned}
+$
+
+To find a value for $d$ which makes the matrix singular with no third pivot,
+let's assume that $d$ is not zero and begin elimination:
+
+$
+\begin{aligned}
+A = &
+\left[ \begin{array}{ccc|c}
+2 & 5 & 1 & 0 \\
+4 & d & 1 & 2 \\
+0 & 1 & -1 & 3
+\end{array} \right] \\
+\xrightarrow{R_2 = R_2 - 2R_1}
+& \left[ \begin{array}{ccc|c}
+2 & 5 & 1 & 0 \\
+0 & d-10 & -1 & 2 \\
+0 & 1 & -1 & 3
+\end{array} \right] \\
+\end{aligned}
+$
+
+Since the third column of $R_2$ and $R_3$ is identical, the matrix will be
+singular if the second column is identical as well. Thus, if $d-10 = 1$ then
+the matrix is singular: it will be singular if $\boxed{d=11}$,
+
+::: note
+Calculating the elimination here was quite tiring. These exercises are getting
+repetitive indeed!
+:::
