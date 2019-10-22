@@ -201,7 +201,7 @@ $
 
 Since the third column of $R_2$ and $R_3$ is identical, the matrix will be
 singular if the second column is identical as well. Thus, if $d-10 = 1$ then
-the matrix is singular: it will be singular if $\boxed{d=11}$,
+the matrix is singular: it will be singular if $\boxed{d=11}$.
 
 ::: note
 Calculating the elimination here was quite tiring. These exercises are getting
@@ -240,3 +240,60 @@ b&=-1
 $
 
 One valid solution is $\boxed{x=1, y=1, z=-1}$.
+
+## Problem 16
+a) Construct a 3 by 3 system that needs two row exchanges to reach a triangular
+    form and a solution.
+
+b) Construct a 3 by 3 system that needs a row exchange to keep going, but breaks
+    down later.
+
+## Solution 16
+a) If $R_{11}$ is zero, we'll immediately need to do a row exchange. Assuming
+$R_{21}$ is nonzero, we'll exchange the first two rows. At this point, we'll need
+to make sure that $R_{22}$ is a zero, so we'll want the original $R_{11}$ to be
+zero. Thus, one such matrix is:
+
+$
+\begin{bmatrix}
+0 & 0 & 1 \\
+1 & 0 & 0 \\
+0 & 1 & 1
+\end{bmatrix}
+$
+
+Another such matrix, with fewer 1's, is
+
+$
+\begin{bmatrix}
+0 & 1 & 0 \\
+0 & 0 & 1 \\
+1 & 0 & 0
+\end{bmatrix}
+$
+
+There cannot be any matrix with fewer 1's that satisfies the requirements.ere
+cannot be any matrix with fewer 1's that satisfies the requirements. This
+matrix will be transformed to the identity matrix $I$.
+
+b) A simple example of a matrix that breaks down after the first row exchange
+succeeds is a matrix with only two nonzeros. Such a matrix must be singular
+because there cannot be 3 pivots. For example:
+
+$
+\begin{bmatrix}
+0 & 1 & 0 \\
+1 & 0 & 0 \\
+0 & 0 & 0
+\end{bmatrix}
+$
+
+Exchanging the first two rows yields pivots in those rows, but there is no way to get
+a pivot in the third row.
+
+::: note
+When solving this problem, I enjoyed working through the logical progression of what must or must not be
+true.
+:::
+
+
