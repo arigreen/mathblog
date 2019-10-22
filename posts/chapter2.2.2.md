@@ -296,4 +296,27 @@ When solving this problem, I enjoyed working through the logical progression of 
 true.
 :::
 
+## Problem 17
+If rows 1 and 2 are the same, how far can you get with elimination (allowing row
+exchange)? If columns 1 and 2 are the same, which pivot is missing?
+
+## Solution 17
+Assume rows 1 and 2 are the same. Then, subtracting row 1 from row 2 will result
+in an all-zero row 2. We can exchange row 2 with row 3, and eliminate x from the
+new row 2, but when we then examine row 3 elimination will fail because there
+will be a zero in the third pivot location.
+
+If columns 1 and 2 are the same, then $R_{11} = R_{12}$ and $R_{21} = R_{22}$.
+Thus, eliminating $R_{21}$ will set $R_{22}$ to zero as well, forcing us to exchange row 2
+with row 3. The resulting $R_{21}$ and $R_{22}$ will also be identical, so eliminating
+$R_{21}$ will lead to a zero at $R_{22}$. At this point, there will be no lower
+rows with a nonzero in the second column, so we will be unable to find a second
+pivot.
+
+## Problem 18
+Construct a 3 by 3 example that has 9 different coefficients on the left side,
+but rows 2 and 3 become zero in elimination.
+
+## Solution 18
+
 
