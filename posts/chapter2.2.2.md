@@ -207,3 +207,36 @@ the matrix is singular: it will be singular if $\boxed{d=11}$,
 Calculating the elimination here was quite tiring. These exercises are getting
 repetitive indeed!
 :::
+
+## Problem 15
+Which number $b$ leads to a later row exchange? Which $b$ leads to a missing
+pivot? In that singular case find a nonzero solution $x,y,z$.
+
+$
+\begin{aligned}
+x + by \hphantom{+2z}    &=0\\
+x - 2y -z &=0\\
+\hphantom{x+2} y +z &=0
+\end{aligned}
+$
+
+In the first step of elimination we will subtract $R_1$ from $R_2$, leaving $-(2+b)$ in
+the second pivot position. If $b$ is **-2** this will require a row exchange.
+
+For any other value of $b$, the second pivot will be $-(2+b)$. To eliminate $y$
+from the third equation, we set $R_3 = R_3 - \frac{1}{-(2+b)}R_2 = R_3 +
+\frac{1}{2+b}R_2.$
+
+For this to result in a singluar matrix, $R_{33}$ must be zero after $R_3$ is
+updated. That is, $1 + \frac{1}{2+b}R_{22} = 0$. Substituting $-1$ for $R_{22}$
+we have:
+
+$
+\begin{aligned}
+1 + \frac{1}{2+b}(-1) &= 0 \\
+1 - \frac{1}{2+b}&=0 \\
+b&=-1
+\end{aligned}
+$
+
+One valid solution is $\boxed{x=1, y=1, z=-1}$.
