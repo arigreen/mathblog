@@ -315,8 +315,36 @@ pivot.
 
 ## Problem 18
 Construct a 3 by 3 example that has 9 different coefficients on the left side,
-but rows 2 and 3 become zero in elimination.
+but rows 2 and 3 become zero in elimination. How many solutions to your system
+with $\boldsymbol{b} = (1,10,100)$ and how many with $\boldsymbol{b}=(0,0,0)$?
 
 ## Solution 18
+As long as $R_{2}$ is some multiple $c$ of $R_{1}$, subtracting $c$ copies of $R_1$
+from $R_2$ will set $R_{2} = 0$. Similarly, $R_{3}$ must be a multiple $d$ of
+$R_1$ so that the operation $R_3=R_3-dR_1$ sets $R_3$ to 0. Therefore, one such example of a matrix is:
+
+$
+\begin{bmatrix}
+1 & 2 & 3 \\
+4 & 8 & 12 \\
+5 & 10 & 15
+\end{bmatrix}
+$
+
+There will be infinite solutions if $\boldsymbol{b} = 0$. In fact, there are no
+non-solutions. For any other value of $\boldsymbol{b}$, however, there are no
+solutions.
+
+::: note
+Initially I created a matrix with 9 variables $a,...,j$ and solved the algebraic
+equations for elimination. This led to a correct solution, but the arithmetic
+was more complex. It's fun how there are multiple ways to reach the same
+solution.
+:::
+
+## Problem 19
+
+## Solution 19
+
 
 
