@@ -343,8 +343,38 @@ solution.
 :::
 
 ## Problem 19
+Which number $q$ makes this system singular and which right side $t$ gives it
+infinitely many solutions? Find the solution that has $z=1$.
+
+$
+\begin{aligned}
+x+4y-2z&=1 \\
+x+7y-6z&=6 \\
+\hphantom{x+}3y+qz&=t
+\end{aligned}
+$
 
 ## Solution 19
 
+By inspection, eliminating $x$ from equation 2 leaves $3y-4z=5$, and
+subtracting this from equation 3 leaves $(q+4)z=t-5$. The system is singular if
+$\boxed{q=-4}$. Solutions exist when $t=5$. If $z=1$ then $y=3$ and $x=-9$.
 
+## Problem 20
+Three planes can fail to have an intersection point, even if no planes are
+parallel. The system is singular if row 3 of $A$ is a ? of the first two rows.
+Find a third equation that can't be solved together with $x+y+z=0$ and
+$x-2y-z=1$.
 
+## Solution 20
+The system is singular if the third row is a **linear combination** of the first
+two. For example, adding one copy of the first equation and 2 copies of the
+second equation gives $3x-3y-z = 2$. Changing the right-side to any other value
+gives a system with no solution.
+
+::: note
+This exercise was surprisingly hard for me to visualize. The solution manual
+made an interesting observation that these three planes form a trangle. This
+makes it easier to visualize, because it is easy to see that the sides of a triangle do not all
+intersect at a single point.
+:::
