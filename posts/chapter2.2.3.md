@@ -251,4 +251,57 @@ $
 \end{bmatrix}
 $
 
+## Problem 27
+Elimination in the usual order gives what matrix $U$ and what solution to this
+"lower triangular" system? We are really solving by _forward substitution_.
+
+$
+\begin{aligned}
+3x \hphantom{-2y+z} &= 3 \\
+6x + 2y \hphantom{+z} &= 8 \\
+9x - 2y + z &= 9
+\end{aligned}
+$
+
+## Solution 27
+First, let's create a lower triangular matrix $L$ to represent this system of
+equations:
+
+$
+\begin{aligned}
+L=
+\begin{bmatrix}
+3 & 0 & 0 \\
+6 & 2 & 0 \\
+9 & -2 & 1
+\end{bmatrix}
+\xrightarrow{R_2 = R_2 - 2R_1}&
+\begin{bmatrix}
+3 & 0 & 0 \\
+0 & 2 & 0 \\
+9 & -2 & 1
+\end{bmatrix}
+\xrightarrow{R_3 = R_3 - 3R_1}&
+\begin{bmatrix}
+3 & 0 & 0 \\
+0 & 2 & 0 \\
+0 & -2 & 1
+\end{bmatrix}
+\xrightarrow{R_3 = R_3 + R_2}&
+\begin{bmatrix}
+3 & 0 & 0 \\
+0 & 2 & 0 \\
+0 & 0 & 1
+\end{bmatrix}=U
+\end{aligned}
+$
+The solution is $\boxed{x=1, y=1, z=2}$
+::: note
+We observe that using elimnation to convert a lower triangular matrix to and
+upper triangular matrix results in a diagonal matrix!
+:::
+
+We skip problem 28, as it is a `MATLAB` exercise.
+
+
 
