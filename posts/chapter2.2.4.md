@@ -42,4 +42,27 @@ $
 We can see that if $A_{55}$ had been $7$, elimination would have produced 0 in the
 bottom row so the matrix would have been singular.
 
+## Problem 31
+Suppose elimination takes $A$ to $U$ without row exchanges. Then row $j$ of $U$
+is a combination of which rows of $A$? If $A\boldsymbol{x}=\boldsymbol{0}$, is
+$U\boldsymbol{x}=\boldsymbol{0}$? If $A\boldsymbol{x}=\boldsymbol{b}$, is
+$U\boldsymbol{x}=\boldsymbol{b}$? If $A$ starts out lower triangular, what is
+the upper triangular $U$?
+
+## Solution 31
+Row 1 of $U$ is equivalent to row 1 of $A$.
+
+Row 2 of $U$ is a linear combination of rows 1 and 2 of $A$.
+
+Row 3 of $U$ is a linear combination of the first 3 rows of $A$.
+
+In general, row $j$ of $U$ is a **combination of the first $j$ rows of $A$.**
+
+If $A\boldsymbol{x}=\boldsymbol{0}$, then any linear combination of the rows
+of the augmented matrix $A|\boldsymbol{b}$ will also have $\boldsymbol{b}=0$,
+so $U\boldsymbol{x}=\boldsymbol{0}$. However, for a nonzero $\boldsymbol{b}$ in
+general $U\boldsymbol{x}\not = \boldsymbol{b}$.
+
+If $A$ starts out lower triangular, then $U$ will be the diagnoal matrix whose
+diagonal entries are equivalent to $A's$.
 
